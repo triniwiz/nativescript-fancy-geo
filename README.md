@@ -9,7 +9,7 @@
 
 ```typescript
 import { TNSFancyGeo, TNSFenceTransition } from 'nativescript-fancy-geo'
-
+const fancyGeo = new TNSFancyGeo();
 let lat = 10.6918;
 let lon = 61.2225;
 TNSFancyGeo.hasPermission()
@@ -23,7 +23,7 @@ TNSFancyGeo.hasPermission()
                     points: [lat, lon], radius: 1000
                     };
     
-       TNSFancyGeo.createCircleFence(circle);
+       fancyGeo.createCircleFence(circle);
 }).catch(()=>{
     TNSFancyGeo.requestPermission({always: true})
 })
